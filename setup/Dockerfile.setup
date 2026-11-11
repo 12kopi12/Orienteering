@@ -1,0 +1,8 @@
+FROM postgres:16-alpine
+
+WORKDIR /opt/setup
+COPY . /opt/setup/
+# RUN chmod 0600 /opt/setup/.pgpass || true
+# ENV PGPASSFILE=/opt/setup/.pgpass
+
+CMD ["sleep", "infinity"]
