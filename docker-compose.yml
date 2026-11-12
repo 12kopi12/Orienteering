@@ -20,9 +20,7 @@ services:
       - backend_network
 
   setup:
-    build:
-      context: ./setup
-      dockerfile: Dockerfile.setup
+    image: ghcr.io/12kopi12/orienteering-setup:latest
     container_name: orienteering_setup
     environment:
       PGPASSWORD: ${POSTGRES_PASSWORD}
@@ -38,9 +36,7 @@ services:
       - backend_network
 
   backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile.backend
+    image: ghcr.io/12kopi12/orienteering-backend:latest
     container_name: orienteering_backend
     restart: always
     environment:
@@ -69,9 +65,7 @@ services:
       - backend_network
 
   frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile.frontend
+    image: ghcr.io/12kopi12/orienteering-frontend:latest
     container_name: orienteering_frontend
     restart: always
     ports:
