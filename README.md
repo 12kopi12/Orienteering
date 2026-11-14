@@ -57,7 +57,7 @@ Systém využívá oddělení kontejnerů do dvou samostatných Docker sítí (`
 - **`backend_network`**: propojuje pouze `backend` a `db` (databázi).
 ---
 
-## 📋 Přehled klíčových REST API endpointů
+## Přehled klíčových REST API endpointů
 
 | Metoda | Endpoint | Oprávnění | Popis |
 |---|---|---|---|
